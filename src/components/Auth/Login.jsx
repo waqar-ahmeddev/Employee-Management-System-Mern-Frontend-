@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Login = () => {
+const Login = ({ handleLoggin }) => {
     const [first, setfirst] = useState('')
       const [second, setsecond] = useState('')
     
@@ -8,6 +8,7 @@ const Login = () => {
         e.preventDefault();
           console.log(first);
            console.log(second);
+            handleLoggin(first, second);
         setfirst('');
         setsecond('');  
       }
