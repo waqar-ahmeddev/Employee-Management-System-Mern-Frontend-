@@ -55,7 +55,7 @@ const CreateTask = () => {
             ></textarea>
           </div>
           
-          <button className='bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-semibold text-sm py-3 px-5 rounded-lg mt-2 w-full'>
+          <button className='bg-emerald-500 hover:bg-emerald-600 transition-colors text-white font-semibold text-sm py-3 px-5 rounded-lg mt-2 w-full cursor-pointer'>
             Create Task
           </button>
         </div>

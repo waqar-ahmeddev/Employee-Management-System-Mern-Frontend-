@@ -27,14 +27,24 @@ function App() {
     }
   };
 
+  const handleLogout = () => {
+    setfirst(null);
+    setLoggedInUser(null);
+  };
+
   return (
     <>
       {!first && <Login handleLoggin={handleLoggin} />}
 
-      {first === "admin" && <AdminDashboard />}
+      {first === "admin" && (
+        <AdminDashboard handleLogout={handleLogout} />
+      )}
 
       {first === "employees" && (
-        <EmployeeDashboard data={loggedInUser} />
+        <EmployeeDashboard
+          data={loggedInUser}
+          handleLogout={handleLogout}
+        />
       )}
     </>
   );
